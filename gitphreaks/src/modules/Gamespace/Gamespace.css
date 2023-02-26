@@ -1,0 +1,68 @@
+.gamespace{
+    background-color:var(--primary-color);
+    overflow:scroll;
+    flex-grow:1;
+    width:70%;
+}
+
+.gamespace::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+    background-color:var(--primary-color)
+}
+
+.gamespace::-webkit-scrollbar-thumb{
+    background-color:#555559;
+    border-radius:1em;
+    border:2px solid var(--primary-color);
+}
+
+.game-table{
+    width:70em;
+    height:70em;
+}
+
+.game-table > * > * >td{
+    background-color:red;
+    width:1em;
+    padding:0;
+    border:2px solid transparent;
+}
+
+.game-table > * > * >td.generator{
+    border:2px dashed white!important;
+}
+.game-table > * > * >td.defender{
+    border:2px solid white!important;
+}
+.game-table > * > * >td.tent-claim{
+    border:2px dotted white;
+    padding:0;
+}
+
+.game-table > * > * >td.no-commit{
+    border-color:grey !important;
+}
+
+.game-table > * > * >td.no-commit-type{
+    border-color:#aaa !important;
+}
+
+.tile-obscurer{
+    background-color:transparent;
+    color:transparent;
+    height:100%;
+    display:block;
+    cursor:pointer;
+
+}
+
+.tile-obscurer:hover{
+    background-color:#fff3;
+}
+.tile-obscurer:active{
+    background-color:#0003;
+}
+.tile{
+    
+}

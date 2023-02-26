@@ -1,0 +1,54 @@
+@keyframes pulse { 
+    0%{ opacity:.9;transform: skewX(0.5deg);}
+    25%{ opacity:1;}
+    50%{opacity:.9;}
+    75%{ opacity:1; transform:skewX(.5deg);}
+    100%{opacity:.9;}
+}
+
+@keyframes pulseLight { 
+    0%{ opacity:.98;transform: skewX(1deg);}
+    25%{ opacity:1;}
+    50%{opacity:.98;}
+    75%{ opacity:1; transform:skewX(.5deg);}
+    100%{opacity:.98;}
+}
+
+.headbar{
+    width:100%;
+    height:5rem;
+    background-color: var(--secondary-color);
+    display:flex;
+    flex-direction:row;
+    justify-content: left;
+    align-items:center;
+    padding-bottom:1rem;
+
+}
+.timer{
+    font-size: 5em;
+    color:white;
+    margin-left:2rem;
+    text-shadow: 2px 1px 4px rgba(251, 12, 12,1), 0px -3px 3px rgba(12, 79, 251,.5),-2px 0px 2px rgba(52, 251, 12, 1), 1px 0px 2px white;
+    animation:pulse ease 200ms infinite;
+}
+.follower-container{
+    margin-top:auto;
+    flex-grow:1;
+    overflow:hidden;
+    text-align:left;
+    
+}
+.timer-follower{
+    font-size:3em;
+    color:grey;
+    text-shadow: grey 1px 0 2px;
+    white-space: nowrap;
+    line-height: 1em;
+    animation:pulseLight ease 200ms infinite;
+}
+.ticker{
+    width:2rem;
+    height:2rem;
+    background-color:white;
+}
