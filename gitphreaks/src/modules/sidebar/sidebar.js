@@ -31,8 +31,6 @@ function plotcost(userState){
 }
 
 function Sidebar(props) {
-
-
     var tile = props.tile
 
     //if(tile.owner == )
@@ -81,9 +79,16 @@ function Sidebar(props) {
                             <option>balls.js</option>
                         </select>
                     </div>):""}
-                    {(true||tile.type == "defender")?(<div>
+                    {(tile.type == "defender")?(<div>
                         <span>Power:</span>
-                        <input type="number" defaultValue = {1} min = {0} className = "control-input"></input>
+                        <input type="number" value = {tile.power} min = {0} className = "control-input" onChange={
+                            (v)=>{
+                                props.type_changer(tile,tile.type,{power:v.target.value,script:""})
+                                tile.power = v.target.value;
+                                props.tile_setter(tile);
+                            }
+                        }
+                        ></input>
                     </div>):""}
                 </div>
             )

@@ -35,6 +35,9 @@
 .game-table > * > * >td.defender{
     border:2px solid white!important;
 }
+.game-table > * > * >td.script{
+    border:2px ridge white!important;
+}
 .game-table > * > * >td.tent-claim{
     border:2px dotted white;
     padding:0;
