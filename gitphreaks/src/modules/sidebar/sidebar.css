@@ -128,7 +128,7 @@
     margin:0;
 }
 
-.tile-control-container > div{
+.tile-control-container-piece{
     margin:0;
     margin-left:0.5rem;
     margin-right:0.5rem;
@@ -168,6 +168,29 @@
 
 .control-input :focus{
     outline:none;
+}
+
+input[type=file]::-webkit-file-upload-button{
+    background-color:#434347;
+    border:none;
+    border-radius:0.5em;
+    color:white;
+    cursor:pointer;
+}
+input[type=file]::-webkit-file-upload-button:hover{
+    background-color:#4b4b4f;
+}
+
+.upload-button{
+    background-color:#4b4b4f;
+    border-radius:1em;
+    text-align:center;
+    margin-top:0.15rem;
+    align-self:center;
+    cursor:pointer;
+}
+.upload-button:hover{
+    background-color:#5b5b5f;
 }
 
 input[type=number]::-webkit-inner-spin-button {

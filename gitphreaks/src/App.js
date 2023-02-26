@@ -8,7 +8,6 @@ import './App.css';
 
 const server_url = "http://18.219.12.42:8443"
 
-var commit_time = new Date()
 
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
@@ -59,8 +58,12 @@ function retrieveField(){
   axios.post(server_url+`/requestgamefield`).then(
     res=>{
       console.log("gamedata retrieved!")
-      temp_gamedata_setter(res.data);
-
+      temp_gamedata_setter(res.data[1]);
+      commit_time_setter(res.data[0])
+      var far_date = new Date(res.data[0])
+      var far_time = far_date.getTime();
+      var now = new Date();
+      setTimeout(()=>{retrieveMyState();retrieveField();},far_time-now.getTime())
     }
   )
 }
@@ -180,8 +183,10 @@ async function commit(){
   setTimeout(retrieveMyState,100);
   
 }
+var [commit_time,commit_time_setter] = [0,0];
 
 function App() {
+  [commit_time,commit_time_setter] = useState(new Date());
   var [current_tile,current_tile_setter] = useState(0);
   var [gamedata, gamedata_setter] = useState([]);
   var [myState,myState_setter] = useState({});

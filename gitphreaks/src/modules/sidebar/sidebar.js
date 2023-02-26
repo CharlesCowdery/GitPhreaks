@@ -36,6 +36,12 @@ function Sidebar(props) {
     //if(tile.owner == )
     var tile_info;
     if(tile){
+        var github_base = "https://github.com/TheSelphine/GitPhreaks/tree/main/Game-World"
+        var s_y = tile.position.y.toString();
+        if(s_y.length<2) s_y = "0"+s_y;
+        var s_x = tile.position.x.toString();
+        if(s_x.length<2) s_x = "0"+s_x;
+        var final_url = github_base+"/row-"+s_y+"/cell-"+s_x;
         tile_info = (
             <div className = "tile-info-box">
                 <h4>Tile data</h4>
@@ -44,7 +50,7 @@ function Sidebar(props) {
                 {(tile.owner!=null)?<p>{`Owner: ${tile.owner.username}`}</p>:""}
                 {(tile.type == "script")?<p>{`Script: ${tile.script}`}</p>:""}
                 {(tile.type == "defender")?<p>{`Power: ${tile.power}`}</p>:""}
-                {(tile.link!="")?<a target="_blank" href={tile.link}>repo location</a>:""}
+                {(true)?<a target="_blank" href={final_url}>repo location</a>:""}
             </div>
         )
     } else {
@@ -57,9 +63,9 @@ function Sidebar(props) {
             control_panel = (
                 <div className = "tile-control-container">
                     <h4>Controls</h4>
-                    <div>
+                    <div className = "tile-control-container-piece">
                         <span>type:</span>
-                        <select className = "control-dropdown" value = {tile.type} onChange={
+                        <select className = "control-dropdown " value = {tile.type} onChange={
                             (v)=>{
                                 props.type_changer(tile,v.target.value,{power:0,script:""})
                                 tile.type = v.target.value;
@@ -72,12 +78,20 @@ function Sidebar(props) {
                             <option value = "script">Script</option>
                         </select>
                     </div>
-                    {(tile.type == "script")?(<div>
+                    {(tile.type == "script")?(<div><div className="tile-control-container-piece">
                         <span>script:</span>
-                        <select className = "control-dropdown">
-                            <option>cock.js</option>
-                            <option>balls.js</option>
-                        </select>
+                            <select className = "control-dropdown">
+                                <option>script1.js</option>
+                                <option>scrip2.js</option>
+                                <option>scrip3.js</option>
+                            </select><br/>
+                        </div>
+                        <div style={{marginTop:"0.2em"}} className = "tile-control-container-piece">
+                            <input type = {"file"}></input>
+                        </div>
+                        <div className = "">
+                            <div className = "upload-button">Upload</div>
+                        </div>
                     </div>):""}
                     {(tile.type == "defender")?(<div>
                         <span>Power:</span>

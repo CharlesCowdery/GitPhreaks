@@ -7,7 +7,11 @@ var target_time = new Date();
 
 setInterval(()=>{
     var date = new Date()
-    var delta = new Date(target_time.getTime()+5*60*1000-date.getTime())
+    var deltaMillis = target_time.getTime()-date.getTime()
+    if(deltaMillis<0){
+        deltaMillis = 0;
+    }
+    var delta = new Date(deltaMillis)
     var minutes = delta.getMinutes().toString();
     var seconds = delta.getSeconds().toString();
     var millis = delta.getMilliseconds().toString();
@@ -30,7 +34,7 @@ function Headbar(props) {
     time_ref = useRef(0)
     //var commit_time = 
     //time_set = time_setter;
-    target_time = props.commit_time;
+    target_time = new Date(props.commit_time);
   return (
     <div className="headbar">
         <div className = "timer" ref = {time_ref}>
@@ -41,9 +45,6 @@ function Headbar(props) {
                 UNTIL REPO PUSH
             </div>
         </div>
-       <div className = "ticker" onMouseDown={props.ticker}>
-         TICK!
-       </div>
     </div>
   );
 }

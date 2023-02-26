@@ -16,6 +16,8 @@
     border-radius:1em;
     border:2px solid var(--primary-color);
 }
+.gamespace::-webkit-scrollbar-corner {
+     background: #555559; }
 
 .game-table{
     width:70em;
@@ -27,6 +29,7 @@
     width:1em;
     padding:0;
     border:2px solid transparent;
+    transition:all 0.2s ease;
 }
 
 .game-table > * > * >td.generator{
@@ -50,6 +53,8 @@
 .game-table > * > * >td.no-commit-type{
     border-color:#aaa !important;
 }
+
+
 
 .tile-obscurer{
     background-color:transparent;
