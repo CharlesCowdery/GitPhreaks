@@ -24,6 +24,9 @@ What we got:
   
 (Seriously, invest in miner stocks, theyre going WAY up)
 
+
 On a serious note, A single person can only do so much. Despite its half finished state, im actually pretty happy with what I got. Its not particularly impressive, but its built on difficult technologies, and ended up shockingly close to done. Another six hours, maybe.
 
 Also if the github pages doesnt work, thats because I forgot to install an ssl cert on my server until the very end, so its self signed. Might make the browser reject the connection to the game server.
+
+#NEVERMIND I BROKE IT
