@@ -1,5 +1,5 @@
 id:1276268737962936
 username:A-2936
 claims:24
-phreaks:17515
-modifier:763
+phreaks:17602
+modifier:768
