@@ -6,7 +6,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios'
 import './App.css';
 
-const server_url = "http://18.219.12.42:8443"
+const server_url = "https://18.219.12.42:8443"
 
 
 function setCookie(cname, cvalue, exdays) {
