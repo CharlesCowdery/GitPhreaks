@@ -28,21 +28,21 @@
     background-color:red;
     width:1em;
     padding:0;
-    border:2px solid transparent;
+    border:3px solid transparent;
     transition:all 0.2s ease;
 }
 
 .game-table > * > * >td.generator{
-    border:2px dashed white!important;
+    border:3px dashed white!important;
 }
 .game-table > * > * >td.defender{
-    border:2px solid white!important;
+    border:3px solid white!important;
 }
 .game-table > * > * >td.script{
-    border:2px ridge white!important;
+    border:3px ridge white!important;
 }
 .game-table > * > * >td.tent-claim{
-    border:2px dotted white;
+    border:3px dotted white;
     padding:0;
 }
 
