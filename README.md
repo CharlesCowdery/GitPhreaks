@@ -29,4 +29,8 @@ On a serious note, A single person can only do so much. Despite its half finishe
 
 Also if the github pages doesnt work, thats because I forgot to install an ssl cert on my server until the very end, so its self signed. Might make the browser reject the connection to the game server.
 
-#NEVERMIND I BROKE IT
+anyways, the instructions
+
+At the very start, you dont have any claims, but claiming a plot is free, so just pick anywhere nice and claim that spot. After that, you can switch the type of the unit. all squares generate 2 Phreaks, but generators create 5. Miners reduce the price of new plots by one every tick, but cost 3 phreaks (though they still add 2 as well). Defenders dont do anything unforunately, and neither do scriptors, just due to the crunch and scope cuts. 
+
+Theres not much to do, but I hope you find it at least satisfying to mess around with.
