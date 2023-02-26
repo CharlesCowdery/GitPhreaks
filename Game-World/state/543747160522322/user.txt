@@ -1,5 +1,5 @@
 id:543747160522322
 username:A-2322
-claims:4
-phreaks:9
+claims:6
+phreaks:24
 modifier:0
